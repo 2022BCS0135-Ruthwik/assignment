@@ -1,0 +1,18 @@
+stages:
+  data_prep:
+    cmd: python src/data_prep.py
+    deps:
+      - src/data_prep.py
+    outs:
+      - data/v1_dataset.csv
+      - data/v2_dataset.csv
+
+  train_rf:
+    cmd: python src/train.py --data_path data/v2_dataset.csv --model_type rf --run_desc "Run 5 - V2 + RF"
+    deps:
+      - src/train.py
+      - src/utils.py
+      - data/v2_dataset.csv
+    outs:
+      - metrics.json
+      - models/model.joblib

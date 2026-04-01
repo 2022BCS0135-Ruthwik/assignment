@@ -1,0 +1,12 @@
+fastapi
+uvicorn
+scikit-learn
+pandas
+numpy
+mlflow
+dvc
+dvc-s3
+joblib
+requests
+boto3
+pydantic

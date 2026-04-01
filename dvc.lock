@@ -1,0 +1,43 @@
+schema: '2.0'
+stages:
+  data_prep:
+    cmd: python src/data_prep.py
+    deps:
+    - path: src/data_prep.py
+      hash: md5
+      md5: 00008c916909c53286dd7e74fab08986
+      size: 1191
+    outs:
+    - path: data/v1_dataset.csv
+      hash: md5
+      md5: ace262b3a99407d362bae28340a09722
+      size: 18832
+    - path: data/v2_dataset.csv
+      hash: md5
+      md5: 984cd3fee6847e8327fe5a7ae46db4ca
+      size: 93599
+  train_rf:
+    cmd: python src/train.py --data_path data/v2_dataset.csv --model_type rf 
+      --run_desc "Run 5 - V2 + RF"
+    deps:
+    - path: data/v2_dataset.csv
+      hash: md5
+      md5: 984cd3fee6847e8327fe5a7ae46db4ca
+      size: 93599
+    - path: src/train.py
+      hash: md5
+      md5: f2e6ee33e669ab7e5bb0a3b253ff30c2
+      size: 2991
+    - path: src/utils.py
+      hash: md5
+      md5: 82357ce2adf5ac2a56f0eddb2d50051f
+      size: 420
+    outs:
+    - path: metrics.json
+      hash: md5
+      md5: c3b8fd4cf0a84a83454b7075764eaeba
+      size: 124
+    - path: models/model.joblib
+      hash: md5
+      md5: 2877a17f69b97ca9908b30972ff9a6de
+      size: 1705697

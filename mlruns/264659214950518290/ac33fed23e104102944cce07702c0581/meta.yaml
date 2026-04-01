@@ -1,0 +1,14 @@
+artifact_uri: file:///C:/Users/ASUS/Documents/ml ops lab/assignment/project/mlruns/264659214950518290/ac33fed23e104102944cce07702c0581/artifacts
+end_time: 1775041676499
+entry_point_name: ''
+experiment_id: '264659214950518290'
+lifecycle_stage: active
+run_id: ac33fed23e104102944cce07702c0581
+run_name: Run5_RF
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1775041671968
+status: 3
+tags: []
+user_id: ASUS

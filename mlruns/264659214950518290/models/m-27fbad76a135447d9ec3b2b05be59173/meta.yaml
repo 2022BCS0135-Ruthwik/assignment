@@ -1,0 +1,10 @@
+artifact_location: file:///C:/Users/ASUS/Documents/ml ops lab/assignment/project/mlruns/264659214950518290/models/m-27fbad76a135447d9ec3b2b05be59173/artifacts
+creation_timestamp: 1775041610955
+experiment_id: '264659214950518290'
+last_updated_timestamp: 1775041615042
+model_id: m-27fbad76a135447d9ec3b2b05be59173
+model_type: null
+name: model
+source_run_id: 3f983f68f55948329848a595d0c61d64
+status: 2
+status_message: null

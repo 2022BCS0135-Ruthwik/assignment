@@ -23,11 +23,15 @@ jobs:
         python -m pip install --upgrade pip
         pip install -r requirements.txt
 
-    
+    # 🔥 CRITICAL FIX (MLflow issue)
+    - name: Clean MLflow store
+      run: rm -rf mlruns
 
     - name: Skip DVC pull (no remote configured)
       run: echo "Skipping DVC pull"
 
     - name: Train baseline model and log to MLflow
+      env:
+        MLFLOW_TRACKING_URI: file:./mlruns
       run: |
         python src/train.py --data_path data/v1_dataset.csv --model_type lr --run_desc "Run 1: CI Baseline"
